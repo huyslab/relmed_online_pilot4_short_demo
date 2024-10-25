@@ -450,7 +450,7 @@ async function load_squences(session) {
         throw new Error('Network response was not ok');
         }
         const structure = await response.json();
-        const sess_structure = structure[session - 1];
+        const sess_structure = structure[session - 1].slice(0,2);
 
         window.totalBlockNumber = sess_structure.length
 
