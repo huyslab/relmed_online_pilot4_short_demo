@@ -102,7 +102,7 @@ function saveDataREDCap(retry = 1, callback = () => {}) {
         prolific_pid: window.prolificPID,
         study_id: window.studyId,
         session_id: window.sessionId,
-        start_time: window.startTime,
+        start_time: jsPsych.getStartTime(),
         jspsych_data: jspsych_data,
         auto_number: auto_number ? 'true' : 'false'
     }])
