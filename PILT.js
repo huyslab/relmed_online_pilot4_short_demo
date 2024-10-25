@@ -462,7 +462,7 @@ async function load_squences(session) {
         }
 
         const test_structure = await test_response.json();
-        const test_sess_structure = test_structure[session - 1];
+        const test_sess_structure = [test_structure[session - 1][1].slice(0,10)];
 
 
         // Fetch the current time from the World Time API
