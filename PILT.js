@@ -465,19 +465,6 @@ async function load_squences(session) {
         const test_sess_structure = test_structure[session - 1];
 
 
-        // Fetch the current time from the World Time API
-        const time_resp = await fetch('https://worldtimeapi.org/api/timezone/Europe/London');
-
-        if (!time_resp.ok) {
-        throw new Error('Network response was not ok');
-        }
-
-        const date_data = await time_resp.json();
-
-        const verifiedDateString = date_data.datetime;
-
-        window.startTime = format_date_from_string(verifiedDateString)
-
         run_full_experiment(sess_structure, test_sess_structure);
     } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
