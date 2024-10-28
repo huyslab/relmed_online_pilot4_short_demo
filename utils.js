@@ -91,7 +91,7 @@ function check_fullscreen(){
 // Save data to REDCap
 function saveDataREDCap(retry = 1, callback = () => {}) {
 
-    console.log(jsPsych.date.get().values());
+    console.log(jsPsych.data.get().values());
 
     callback();
 }
