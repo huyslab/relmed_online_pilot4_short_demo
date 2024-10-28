@@ -462,7 +462,7 @@ async function load_squences(session) {
         }
 
         const test_structure = await test_response.json();
-        const test_sess_structure = test_structure[session - 1];
+        const test_sess_structure = [test_structure[session - 1][0].slice(0,5), test_structure[session - 1][1].slice(0,5)];
 
 
         run_full_experiment(sess_structure, test_sess_structure);
